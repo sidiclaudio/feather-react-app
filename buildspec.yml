@@ -7,7 +7,6 @@ phases:
       - echo Installing
   pre_build:
     commands:
-      - cd backend
       - echo Installing source NPM dependencies.
       - npm install
   build:
