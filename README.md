@@ -6,6 +6,7 @@ This repository contains the necessary configuration for deploying a CI/CD pipel
 
 # Architecture
 
+<img width="730" alt="Screen Shot 2021-08-21 at 4 22 42 AM" src="https://user-images.githubusercontent.com/44326322/130320209-d751f73d-d94e-487b-8d1f-7f805f0b551e.png">
 
 
 # Solution
@@ -82,6 +83,11 @@ nc -zv 127.0.0.1 8080
 ```
 
 **4. Finally setup CODEPIPELINE to orchestrate the deployment by reaching out to CODEBUILD to build the code and CODEDEPLOY to deploy onto our EC2.**
+
+# Validation
+
+<img width="330" alt="Screen Shot 2021-08-21 at 4 11 35 AM" src="https://user-images.githubusercontent.com/44326322/130320026-4ac0b58c-37e4-4b0d-a5a7-043970c53b8e.png">
+
 
 # Futur Enhancement
 - Move to a serverless architecture.
