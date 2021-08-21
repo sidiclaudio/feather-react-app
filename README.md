@@ -86,9 +86,16 @@ nc -zv 127.0.0.1 8080
 
 # Validation
 
+**URL:**
+
+<img width="934" alt="Screen Shot 2021-08-21 at 4 25 28 AM" src="https://user-images.githubusercontent.com/44326322/130320271-7791ccdf-c0e0-4378-968d-7676114e7bb3.png">
+
+**PIPELINE:**
+
 <img width="330" alt="Screen Shot 2021-08-21 at 4 11 35 AM" src="https://user-images.githubusercontent.com/44326322/130320026-4ac0b58c-37e4-4b0d-a5a7-043970c53b8e.png">
 
 
 # Futur Enhancement
 - Move to a serverless architecture.
 - Refactor the App to dynamically grab the EC2 instance IP address.
+- Add IP address to a Route 53 domain.
