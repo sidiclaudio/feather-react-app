@@ -10,7 +10,7 @@ This repository contains the necessary configuration for deploying a CI/CD pipel
 
 # Solution
 
-**1. Prepare an Amazon Linux 2 EC2 instance by deploying a CodeDeploy agent. We will use Cloudformation to deploy the EC2 instance with the user-data script below:**
+**1. Setup CLOUDFORMATION template for preparing an Amazon Linux 2 EC2 instance on which we will install CodeDeploy agent. We will use Cloudformation to deploy the EC2 instance with the user-data script below:**
 
 ``` #!/bin/bash
 yum -y update
@@ -20,6 +20,11 @@ cd /home/ec2-user
 wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
 chmod +x ./install
 ./install auto 
+```
+
+Create Cloudformation stack using AWS CLI
+```
+aws cloudformation create-stack --stack-name nodeserverstack --template-body file://node-server-instance.yml
 ```
 
 Once the server is up - check the status of the codeDeploy agent
@@ -78,6 +83,6 @@ nc -zv 127.0.0.1 8080
 
 **4. Finally setup CODEPIPELINE to orchestrate the deployment by reaching out to CODEBUILD to build the code and CODEDEPLOY to deploy onto our EC2.**
 
-#FUTUR ENHANCEMENT
+# Futur Enhancement
 - Move to a serverless architecture.
 - Refactor the App to dynamically grab the EC2 instance IP address.
